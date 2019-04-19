@@ -1,6 +1,6 @@
 <template>
   <section class="index">
-    <card
+    <list
       v-for="post in posts"
       v-bind:key="post.fields.slug"
       :title="post.fields.title"
@@ -13,13 +13,13 @@
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
-import Card from "~/components/card.vue";
+import List from "~/components/list.vue";
 
 const client = createClient();
 
 export default {
   components: {
-    Card
+    List
   },
   async asyncData({ env, params }) {
     return await client
