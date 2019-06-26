@@ -44,6 +44,16 @@ module.exports = {
     }
   },
 
+  modules: [
+    [
+      "@nuxtjs/google-adsense",
+      {
+        id: "ca-pub-3346235264094165",
+        pageLevelAds: true
+      }
+    ]
+  ],
+
   plugins: [{ src: "~plugins/contentful" }],
 
   generate: {
